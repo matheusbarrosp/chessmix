@@ -16,7 +16,7 @@ Instructions:
 1) Define the hyperparameters following the descriptions above.
 2) In the third cell, set the name of the dataset folder (dataset_name). Inside the dataset folder, it is expected to be two folder: "images" and "masks" (each one with the corresponding data and with the label presenting the same name as the corresponding image).
 3) Set the variable ignore_set with the list of the name of the images that will be ignored due to taking part of the validation or test sets.
-4) Run the rest of the cell. The new synthetic images and the corresponding labels will be saved in the "new_data" folder. The "n_images" variable defines the amount of images to be saved.
+4) Run the rest of the cells. The new synthetic images and the corresponding labels will be saved in the "new_data" folder. The "n_images" variable defines the amount of images to be saved.
 
 For the unlabeled parts of images (from the black squares of ChessMix's images or in datasets with unlabed pixels), we set the pixel value 0 and the rest of the labeled classes will be from 1 onward. Later on the training code, these pixels will be subtracted by one, meaning the unlabeled pixels will be -1 (the number chosen to be the ignore_index of the function) and the rest of the classes from 0 onward.
 
