@@ -7,7 +7,7 @@
 
 Hyperparameters defined in the second cell of the Jupyter Notebook files:
 - **crop_size** = size of the final synthetic images
-- **patch_size** = lowerst size of the mini-patches that will compose synthetic images
+- **patch_size** = lowest size of the mini-patches that will compose synthetic images
 - **n_scale** = number of scaling factors for the mini-patches' size
 - **patch_overlap** = percentage of overlap between neighbor mini-patches across the whole dataset 
 - **n_classes** = number of classes of the dataset
@@ -24,6 +24,12 @@ For the unlabeled parts of images (from the black squares of ChessMix's images o
 
 ## Training and test instructions:
 
-By default, we expect the final dataset of original+synthetic images to follow the same format of the dataset folder used in the ChessMix notebooks', which means there should be a folder named images (with the images) and a folder masks (with the labels, following the same name as the corresponding images). Furthermore, we expect the original images' names to start with a non-digit character, as the new synthetic images are (by default) named 1.png, 2.png and so on. There should also be files named "train.txt", "val.txt" and "test.txt" in the root of the dataset folder, containing the name of the images composing each one of corresponding data divisions (one image per line of the file).
+By default, we expect the final dataset of original+synthetic images to follow the same format of the dataset folder used in the ChessMix notebooks', which means there should be a folder named "images" (with the images) and a folder "masks" (with the labels, following the same name as the corresponding images). Furthermore, we expect the original images' names to start with a non-digit character, as the new synthetic images are (by default) named 1.png, 2.png and so on. There should also be files named "train.txt", "val.txt" and "test.txt" in the root of the dataset folder, containing the name of the images composing each one of corresponding data divisions (one image per line of the file).
 
 Examples for how to perform the training and test procedures are present in the train_test.sh file. Follow the args definition in main and test files for details about the parameters.
+
+------------
+
+If you found this work useful, please consider citing it (we will update with SIBGRAPI's citation as soon as it is available):
+
+https://arxiv.org/abs/2108.11535
