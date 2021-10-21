@@ -6,11 +6,11 @@
 ## Chessmix usage instructions:
 
 Hyperparameters defined in the second cell of the Jupyter Notebook files:
-**crop_size** = size of the final synthetic images
-**patch_size** = lowerst size of the mini-patches that will compose synthetic images
-**n_scale** = number of scaling factors for the mini-patches' size
-**patch_overlap** = percentage of overlap between neighbor mini-patches across the whole dataset
-**n_classes** = number of classes of the dataset
+- **crop_size** = size of the final synthetic images
+- **patch_size** = lowerst size of the mini-patches that will compose synthetic images
+- **n_scale** = number of scaling factors for the mini-patches' size
+- **patch_overlap** = percentage of overlap between neighbor mini-patches across the whole dataset 
+- **n_classes** = number of classes of the dataset
 
 Instructions:
 1) Define the hyperparameters following the descriptions above.
