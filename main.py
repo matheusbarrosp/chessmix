@@ -41,7 +41,7 @@ parser.add_argument('--resume', type=str, default='False', help="Resume training
 parser.add_argument('--resume_epoch', type=int, default=0, help="Starting epoch for resume training")
 parser.add_argument('--resume_iou', type=float, default=0, help="Starting iou for resume training")
 parser.add_argument('--resume_model', type=str, default='models/vaihingen_plus0/vaihingen_plus0_best.pth', help="Model for resume training")
-parser.add_argument('--data_augmentation', type=str, default='False', help="Use or not data augmentation")
+parser.add_argument('--data_augmentation', type=str, default='False', help="Use or not data augmentation (i.e. data warping, not including ChessMix)")
 
 args = parser.parse_args()
 
@@ -101,17 +101,6 @@ def evaluate(prds, labs):
     return int_sum, uni_sum
 
 
-class MyRotationTransform:
-    """Rotate by one of the given angles."""
-
-    def __init__(self, angles):
-        self.angles = angles
-
-    def __call__(self, x):
-        angle = random.choice(self.angles)
-        return TF.rotate(x, angle)
-
-
 def train(train_loader, net, criterion, optimizer, epoch, ITERATIONS):
     tic = time.time()
     
@@ -120,9 +109,7 @@ def train(train_loader, net, criterion, optimizer, epoch, ITERATIONS):
 
     # Lists for losses and metrics.
     train_loss = []
-    
-    #int_all = np.asarray(args.n_classes, dtype=np.float32)
-    #uni_all = np.asarray(args.n_classes, dtype=np.float32)
+
     int_all = np.asarray(0, dtype=np.float32)
     uni_all = np.asarray(0, dtype=np.float32)
 
@@ -191,8 +178,6 @@ def validate(val_loader, net, criterion, epoch):
     # Lists for losses and metrics.
     val_loss = []
 
-    #int_all = np.asarray(args.n_classes, dtype=np.float32)
-    #uni_all = np.asarray(args.n_classes, dtype=np.float32)
     int_all = np.asarray(0, dtype=np.float32)
     uni_all = np.asarray(0, dtype=np.float32)
 
