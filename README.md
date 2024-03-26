@@ -30,6 +30,6 @@ Examples for how to perform the training and test procedures are present in the 
 
 ------------
 
-If you found this work useful, please consider citing it (we will update with SIBGRAPI's citation as soon as it is available):
+If you found this work useful, please consider citing it:
 
-https://arxiv.org/abs/2108.11535
+M. B. Pereira and J. A. dos Santos, "ChessMix: Spatial Context Data Augmentation for Remote Sensing Semantic Segmentation," 2021 34th SIBGRAPI Conference on Graphics, Patterns and Images (SIBGRAPI), Gramado, Rio Grande do Sul, Brazil, 2021, pp. 278-285, doi: 10.1109/SIBGRAPI54419.2021.00045.
